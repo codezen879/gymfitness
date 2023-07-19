@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+
+.landingPage {
+    /* min-height: 100vh; */
+    /* color: white; */
+    background: #12130f;
+}
+
+.landingImageContainer {
+    
+    padding: 0 !important;
+
+}
+
+.landingImage {
+    background-image: url('./gym2.jpg');
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+    position: relative; /* Add this line to set the positioning context for pseudo-element */
+}
+
+.landingImage::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0; /* Position the pseudo-element at the right side */
+    width: 30%; /* Set the width of the fading effect */
+    height: 100%;
+    background-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.5)); /* Add linear gradient for fading effect */
+}
+
+
+.landingHeader {
+    font-family: 'Philosopher';
+    text-align: center;
+    margin: 5% 0;
+    font-size: 50px;
+    color: white;
+}
+
+.appForm {
+    background-color: #12130f;
+    padding: 20px 40px !important;
+    overflow: auto;
+}
+
+.pageSwitcher {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10%;
+}
+
+.pageSwitcherItem {
+    background-color: #40434e;
+    color: #9da6b1;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.pageSwitcherItem:hover {
+    color: white;
+}
+
+.pageSwitcherItem-active {
+    background-color: #0b5ed7;
+    color: white;
+}
+
+.pageSwitcherItem:first-child {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.pageSwitcherItem:last-child {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+@media screen and (max-width: 800px) {
+	.landingImage{
+        display: none;
+    }
+}
